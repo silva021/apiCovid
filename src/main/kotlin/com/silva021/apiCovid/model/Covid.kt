@@ -1,28 +1,31 @@
 package com.silva021.apiCovid.model
 
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.Table
+import javax.persistence.*
 
 
-//@Entity
-//@Table(name = "t_covid")
+@Entity()
+@Table(name = "t_Covid")
 class Covid {
-//    @Column(name = "data", nullable = false)
-    val date: String = ""
+    @Id
+    @GeneratedValue
+    @Column(name = "id", nullable = false)
+    var id: Long = 0
 
-//    @Column(name = "cidade", nullable = false)
-    val city: String = ""
+    @Column(name = "data", nullable = false)
+    var date: String = ""
+    @Column(name = "cidade", nullable = false)
+    var city: String = ""
 
-//    @Column(name = "estado", nullable = false)
-    val state: String = ""
+    @Column(name = "estado", nullable = false)
+    var state: String = ""
 
-//    @Column(name = "tipo", nullable = false)
-    val type: Int = 0
+    @Column(name = "tipo", nullable = false)
+    var type: Int = 0
 
-//    @Column(name = "casosConfirmados", nullable = false)
-    val cases: Int = 0
+    @Column(name = "casos", nullable = false)
+    var cases: Int = 0
 
-//    @Column(name = "mortes", nullable = false)
-    val deaths: Int = 0
+    @Column(name = "mortes", nullable = false)
+    var deaths: Int = 0
+
 }

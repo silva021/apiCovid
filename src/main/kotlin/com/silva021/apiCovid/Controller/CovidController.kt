@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("/covid")
+@RequestMapping("/covid/api")
 class CovidController (private val mService: CovidService) {
 
     @GetMapping("/date/{date}")

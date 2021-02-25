@@ -2,7 +2,6 @@ package com.silva021.apiCovid.model
 
 import javax.persistence.*
 
-
 @Entity()
 @Table(name = "t_Covid")
 class Covid {

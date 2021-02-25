@@ -5,7 +5,7 @@ API Rest que tem como objetivo trazer os dados mais detalhados, utilizando Kotli
 
 **1. Baixar os dados em CSV**
 ``` Bash
-  https://brasil.io/dataset/covid19/caso_full/
+https://brasil.io/dataset/covid19/caso_full/
 ```
 
 **2. Criar banco de dados**
@@ -19,21 +19,21 @@ create database BDCovid
 
 ```SQL Server
 
-create table t_Covid_Buffer(
-  [date]                        [varchar](max)
-  ,[city_ok]                    [varchar](max)
-  ,[state]                      [varchar](max)
-  ,[city]                       [varchar](max)
-  ,[place_type]                 [varchar](max)
-  ,[confirmed]                  [varchar](max)
-  ,[deaths]                     [varchar](max)
-  ,[order_for_place]            [varchar](max)
-  ,[is_last]                    [varchar](max)
-  ,[estimated_population_2019]  [varchar](max)
-  ,[estimated_population]       [varchar](max)
-  ,[city_ibge_code]             [varchar](max)
-  ,[confirmed_per_100k_inhabitants]    [varchar](max)
-  ,[death_rate]                        [varchar](max)
+create table [dbo].[t_Covid_Buffer](
+	[date]                        		[varchar](max)
+	,[city_ok]                    		[varchar](max)
+	,[state]                      		[varchar](max)
+	,[city]                       		[varchar](max)
+	,[place_type]                 		[varchar](max)
+	,[confirmed]                  		[varchar](max)
+	,[deaths]                     		[varchar](max)
+	,[order_for_place]            		[varchar](max)
+	,[is_last]                   		[varchar](max)
+	,[estimated_population_2019] 	       	[varchar](max)
+	,[estimated_population]              	[varchar](max)
+	,[city_ibge_code]            	       	[varchar](max)
+	,[confirmed_per_100k_inhabitants]    	[varchar](max)
+	,[death_rate]                        	[varchar](max)
 )
 ```
 
@@ -41,12 +41,12 @@ create table t_Covid_Buffer(
 ```SQL Server
 CREATE TABLE [dbo].[t_Covid](
 	[id]      [int] IDENTITY(1,1) NOT NULL,
-	[data]    [date] NULL,
-	[cidade]  [varchar](100) NULL,
-	[estado]  [varchar](100) NULL,
-	[tipo]    [int] NULL,
-	[casos]   [int] NULL,
-	[mortes]  [int] NULL
+	,[data]    [date] NULL,
+	,[cidade]  [varchar](100) NULL,
+	,[estado]  [varchar](100) NULL,
+	,[tipo]    [int] NULL,
+	,[casos]   [int] NULL,
+	,[mortes]  [int] NULL
 ) 
 ```
 
